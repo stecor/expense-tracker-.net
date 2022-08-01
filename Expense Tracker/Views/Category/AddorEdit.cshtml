@@ -7,7 +7,8 @@
 
 <div class="row">
     <div class="col-md-7">
-        <form asp-action="AddorEdit">
+        <div class="widget p-5">
+               <form asp-action="AddorEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
              <input type="hidden" name="CategoryId" value="CategoryId" />
                    <div class="mb-3">
@@ -30,12 +31,16 @@
      
           <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
         </form>
+        </div>
     </div>
+           <div class="col-md-5">
+            <div class="widget h-100 d-flex justify-content-center align-items-center" style="background-color:#212b36">
+                <i class="fa-solid fa-shapes fa-2xl"></i>
+            </div>
+        </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
